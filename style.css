@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 600px; /* Para o formulário */
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ajuste para o container da lista de feedbacks */
+.container.feedbacks-list {
+    max-width: 900px;
+}
+
+h1 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select,
+form textarea {
+    width: calc(100% - 22px); /* Ajuste para padding e borda */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.view-feedbacks, .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    width: fit-content; /* Para os botões ficarem centralizados e não com largura total */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.view-feedbacks:hover, .back-link:hover {
+    background-color: #5a6268;
+}
+
+/* Estilos para a tabela de feedbacks */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para as classificações */
+.classification-Excelente {
+    color: green;
+    font-weight: bold;
+}
+
+.classification-Bom {
+    color: orange;
+    font-weight: bold;
+}
+
+.classification-Ruim {
+    color: red;
+    font-weight: bold;
+}
+
+.no-feedbacks {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    font-style: italic;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbacks Registrados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container feedbacks-list"> <h1>Feedbacks de Atendimento</h1>
+        {% if feedbacks %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Atendente</th>
+                    <th>Setor</th>
+                    <th>Tipo</th>
+                    <th>Nota</th>
+                    <th>Classificação</th>
+                    <th>Comentário</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for feedback in feedbacks %}
+                <tr>
+                    <td>{{ feedback[1] }}</td> <td>{{ feedback[2] }}</td> <td>{{ feedback[3] }}</td> <td>{{ feedback[4] }}</td> <td class="classification-{{ feedback[5] }}">{{ feedback[5] }}</td> <td>{{ feedback[6] }}</td> </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="no-feedbacks">Nenhum feedback registrado ainda.</p>
+        {% endif %}
+        <a href="/" class="back-link">Registrar Novo Feedback</a>
+    </div>
+</body>
+</html>
